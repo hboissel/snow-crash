@@ -4,14 +4,12 @@ all:
 logs:
 	docker logs attacker
 
-stop:
+clean:
 	docker compose -f docker-compose.yml stop 
 
-clean: stop
-	docker compose -f docker-compose.yml down
-
 fclean: clean
-	docker system prune -af
+	docker compose -f docker-compose.yml down
+	docker compose -f docker-compose.yml rm
 
 re: fclean all
 
