@@ -1,4 +1,4 @@
-level09:25749xKZ8L7DkSCwJkT9dyv6f
+# Level09
 
 ```shell
 level09@SnowCrash:~$ hexdump -C token 
@@ -25,3 +25,5 @@ The encryption shifts each character by its position index in the Extended ASCII
   - 'b' → 'b' + 1 → 'c'
   - 'c' → 'c' + 2 → 'e'
   - **Result: "ace"**
+
+So we can create a small [script](level09.py) to decrypt the token.
